@@ -941,8 +941,8 @@ const forgotAdminPassword = asyncHandler(async (req, res) => {
     await admin.save({ validateBeforeSave: false });
 
     // Create reset URL - POINT TO FRONTEND, NOT BACKEND
-    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
-    const resetUrl = `${frontendUrl}/reset-password/${resetToken}`;
+    const frontendUrl = process.env.FRONTEND_URL;
+    const resetUrl = `${frontendUrl}/areset-password/${resetToken}`;
     
     const html = `
       <h1>Password Reset Request</h1>
