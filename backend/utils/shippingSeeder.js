@@ -78,7 +78,7 @@ const seedShippingMethods = async () => {
 // Run seeder if called directly
 if (require.main === module) {
   
-  mongoose.connect('mongodb://localhost:27017/flower_shop')
+  mongoose.connect('mongodb+srv://gk7380494_db_user:jg9VQHtvjJfiAJgO@cluster0.cyhsizn.mongodb.net/')
     .then(() => seedShippingMethods())
     .then(() => mongoose.disconnect())
     .catch(console.error);
