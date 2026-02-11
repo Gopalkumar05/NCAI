@@ -448,7 +448,7 @@ const ReviewList = ({
   const menuRefs = useRef({});
 
   // Your backend base URL
-  const BACKEND_URL = 'http://localhost:5000';
+  const BACKEND_URL = 'https://ncai.onrender.com';
   
   // Function to get full image URL
   const getFullImageUrl = useCallback((imagePath) => {
