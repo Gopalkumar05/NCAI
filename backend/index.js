@@ -9,6 +9,7 @@ require('dotenv').config();
 const connectDB = require('./config/database');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const { testCloudinaryConnection } = require('./config/cloudinary');
+const seedShippingMethods = require('./utils/shippingSeeder');
 
 
 
@@ -31,6 +32,7 @@ app.use('/uploads', express.static('uploads'));
 // Connect to database
 connectDB();
 testCloudinaryConnection();
+seedShippingMethods();
 // Security middleware
 app.use(helmet());
 // app.use(cors({
