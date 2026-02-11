@@ -1,78 +1,3 @@
-// // services/productService.js
-// import api from './api';
-
-// export const productService = {
-//   // Products
-//   getProducts: (params = {}) => api.get('/products', { params }),
-//   getProductById: (id) => api.get(`/products/${id}`),
-//   getFeaturedProducts: () => api.get('/products/featured'),
-//   getNewArrivals: () => api.get('/products/new-arrivals'),
-//   getBestSellers: () => api.get('/products/best-sellers'),
-//   getRelatedProducts: (id) => api.get(`/products/${id}/related`),
-//   searchProducts: (query, params = {}) => api.get('/products/search', { params: { q: query, ...params } }),
-  
-//   // Categories
-//   getCategories: () => api.get('/categories'),
-//   getCategoryBySlug: (slug) => api.get(`/categories/${slug}`),
-//   getCategoryProducts: (slug, params = {}) => api.get(`/categories/${slug}/products`, { params }),
-  
-//   // Reviews
-//   getProductReviews: (productId, params = {}) => api.get(`/products/${productId}/reviews`, { params }),
-//   addReview: (productId, data) => api.post(`/products/${productId}/reviews`, data),
-  
-//   // Wishlist (for non-authenticated users via localStorage)
-//   getWishlistItems: (ids) => api.post('/products/wishlist-items', { ids }),
-  
-//   // Compare Products
-//   compareProducts: (ids) => api.post('/products/compare', { ids }),
-  
-//   // Products by Tags
-//   getProductsByTag: (tag, params = {}) => api.get(`/products/tag/${tag}`, { params }),
-//   getPopularTags: () => api.get('/products/tags/popular'),
-// };
-
-// export default productService;
-
-
-
-// services/productService.js
-// import api from './api';
-
-// export const productService = {
-//   // Products
-//   getProducts: (params = {}) => api.get('/products', { params }),
-//   getProductById: (id) => api.get(`/products/${id}`),
-//   getFeaturedProducts: () => api.get('/products/featured'),
-//   getNewArrivals: () => api.get('/products/new-arrivals'),
-//   getTopRatedProducts: () => api.get('/products/top-rated'),
-//   getDiscountedProducts: () => api.get('/products/discounted'),
-//   getRelatedProducts: (id) => api.get(`/products/${id}/related`),
-//   searchProducts: (query, params = {}) => api.get('/products/search', { params: { q: query, ...params } }),
-  
-//   // Categories
-//   getCategories: () => api.get('/categories'),
-//   getCategoryBySlug: (slug) => api.get(`/categories/${slug}`),
-//   getCategoryProducts: (slug, params = {}) => api.get(`/categories/${slug}/products`, { params }),
-  
-//   // Reviews
-//   getProductReviews: (productId, params = {}) => api.get(`/products/${productId}/reviews`, { params }),
-//   addReview: (productId, data) => api.post(`/products/${productId}/reviews`, data),
-  
-//   // Wishlist (for non-authenticated users via localStorage)
-//   getWishlistItems: (ids) => api.post('/products/wishlist-items', { ids }),
-  
-//   // Compare Products
-//   compareProducts: (ids) => api.post('/products/compare', { ids }),
-  
-//   // Products by Tags
-//   getProductsByTag: (tag, params = {}) => api.get(`/products/tag/${tag}`, { params }),
-//   getPopularTags: () => api.get('/products/tags/popular'),
-  
-//   // Products by Occasion
-//   getProductsByOccasion: (occasion) => api.get(`/products/occasion/${occasion}`),
-// };
-
-// export default productService;
 
 
 import api from './api';
@@ -96,30 +21,7 @@ export const productService = {
   }),
   getCategoryProducts: (slug, params = {}) => api.get(`/products?category=${slug}`, { params }),
   
-  // Reviews
-  // getProductReviews: (productId, params = {}) => api.get(`/products/${productId}/reviews`, { params }),
-  // addReview: (productId, data) => api.post(`/products/${productId}/reviews`, data),
-  // getProductReviews: (productId, params = {}) => 
-  //   api.get(`/products/${productId}/reviews`, { params }),
-  
-  // getReview: (productId, reviewId) => 
-  //   api.get(`/products/${productId}/reviews/${reviewId}`),
-  
-  // addReview: (productId, data) => 
-  //   api.post(`/products/${productId}/reviews`, data),
-  
-  // updateReview: (productId, reviewId, data) => 
-  //   api.put(`/products/${productId}/reviews/${reviewId}`, data),
-  
-  // deleteReview: (productId, reviewId) => 
-  //   api.delete(`/products/${productId}/reviews/${reviewId}`),
-  
-  // markReviewHelpful: (productId, reviewId) => 
-  //   api.post(`/products/${productId}/reviews/${reviewId}/helpful`),
-  
-  // reportReview: (productId, reviewId, data) => 
-  //   api.post(`/products/${productId}/reviews/${reviewId}/report`, data),
-  
+
 
 
   getProductReviews: (productId, params = {}) => 
